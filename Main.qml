@@ -33,7 +33,11 @@ Window {
     Timer {
         interval: 1000
         repeat: true
-        onTriggered: console.log("Video stream:", videoOutput.sourceRect)
+        onTriggered: {
+            console.log("Video stream:", videoOutput.sourceRect)
+            console.log("Video orientation:", videoOutput.orientation)
+        }
+
         running: true
     }
 
